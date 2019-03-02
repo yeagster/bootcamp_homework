@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 # Set up connection to SQL database
 # Reflect and existing db into a new model, reflect the tables, and save the table references
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///databases/bellybutton.sqlite"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///bellybutton.sqlite"
 belly_db = SQLAlchemy(app)
 Base = automap_base()
 Base.prepare(belly_db.engine, reflect=True)
